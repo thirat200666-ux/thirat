@@ -1,32 +1,104 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML BASIC</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    h4 {
-      color: gold;
-    }
-    #heading5 {
-      color: chocolate;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบสอบถามความชอบ (ตามภาพที่ 1)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: inline-block; margin-right: 15px; }
+        .fieldset-border {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
-<h1 title="headind1">Heading</h1>
-<h2 style="color: brown;">Heading</h2>
-<h3 style="color: #00FF00;">Heading</h3>
-<h4>Heading</h4>
-<h5 id="headind5">Heading</h5>
-<h5 class="heading5">Heading</h5>
-<h6>Heading</h6>
-<a href="https://www.ubru.ac.th" target="_blank">
-  <img src="images/house.png" alt="MY House" width="64" height="64">
-</a>
-<img src="images/sunflower.png" alt="flower" width="64" height="64">
-<img title="pokemon" src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/409.png" alt="pokemon" width="128" height="128">
 
-  <body>
-    <html>
+    <fieldset class="fieldset-border">
+        <legend>ข้อมูลผู้ตอบแบบสอบถาม</legend>
+        
+        <div class="form-group">
+            <label for="name">ชื่อ-นามสกุล</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="student_id">รหัสนักศึกษา</label>
+            <input type="text" id="student_id" name="student_id" required>
+        </div>
+        
+        <div class="form-group">
+            <label>เพศ</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">ชาย</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">หญิง</label>
+        </div>
+
+        <div class="form-group">
+            <label for="faculty">สังกัดคณะ</label>
+            <select id="faculty" name="faculty" size="7" required>
+                <option value="science">วิทยาศาสตร์</option>
+                <option value="computer_science">วิทยาการคอมพิวเตอร์</option>
+                <option value="arts">ครุศาสตร์</option>
+                <option value="business">บริหารธุรกิจและการจัดการ</option>
+                <option value="humanities">มนุษยศาสตร์</option>
+                <option value="tech_industry">เทคโนโลยีอุตสาหกรรม</option>
+                <option value="nursing">พยาบาลศาสตร์</option>
+                <option value="public_health">สาธารณสุขศาสตร์</option>
+                <option value="medicine">แพทย์แผนไทยและทางเลือก</option>
+                <option value="law">นิติศาสตร์</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>สีที่ชื่นชอบ</label><br>
+            <input type="checkbox" id="red" name="fav_color" value="red">
+            <label for="red">สีแดง</label>
+            <input type="checkbox" id="green" name="fav_color" value="green">
+            <label for="green">สีเขียว</label>
+            <input type="checkbox" id="blue" name="fav_color" value="blue">
+            <label for="blue">สีน้ำเงิน</label>
+        </div>
+
+        <div class="form-group">
+            <label>ผลไม้ที่ไม่ชื่นชอบ</label><br>
+            <input type="checkbox" id="grape" name="dislike_fruit" value="grape">
+            <label for="grape">มะม่วง</label>
+            <input type="checkbox" id="custard_apple" name="dislike_fruit" value="custard_apple">
+            <label for="custard_apple">น้อยหน่า</label>
+            <input type="checkbox" id="durian" name="dislike_fruit" value="durian">
+            <label for="durian">ทุเรียน</label>
+            <input type="checkbox" id="rambutan" name="dislike_fruit" value="rambutan">
+            <label for="rambutan">ลำไย</label>
+            <input type="checkbox" id="farang" name="dislike_fruit" value="farang">
+            <label for="farang">ฝรั่ง</label>
+            <input type="checkbox" id="watermelon" name="dislike_fruit" value="watermelon">
+            <label for="watermelon">แตงโม</label>
+        </div>
+
+        <div class="form-group">
+            <label>อาหารที่ชื่นชอบ</label><br>
+            <input type="checkbox" id="curry" name="fav_food" value="curry">
+            <label for="curry">ต้มยำกุ้ง</label>
+            <input type="checkbox" id="egg_stir" name="fav_food" value="egg_stir">
+            <label for="egg_stir">ไข่เจียวหมูสับ</label>
+            <input type="checkbox" id="green_curry" name="fav_food" value="green_curry">
+            <label for="green_curry">แกงเขียวหวานไก่</label>
+            <input type="checkbox" id="pad_thai" name="fav_food" value="pad_thai">
+            <label for="pad_thai">ผัดไทย</label>
+            <input type="checkbox" id="crispy_pork" name="fav_food" value="crispy_pork">
+            <label for="crispy_pork">ราดหน้าหมูกรอบ</label>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="บันทึก">
+        </div>
+
+    </fieldset>
+
+</body>
+</html>
