@@ -1,0 +1,10 @@
+env/
+__pycache__/
+index.html/
+from.html/
+_index.html/
+list.html/
+table.html/
+images/
+css/
+venv/
